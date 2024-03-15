@@ -1,5 +1,5 @@
 .banner {
-  background-image: url("../../images/cover.jfif");
+  background-image: url("../../images/cover.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,6 +38,18 @@
   color: white;
 }
 
+.banner::before {
+  content: "";
+  width: 100vw;
+  height: 100vmin;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  clip-path: polygon(100% 80%, 50% 100%, 100% 100%);
+  max-width: 100%;
+}
+
 .banner::after {
   content: "";
   width: 100vw;
@@ -46,9 +58,10 @@
   position: absolute;
   top: 0%;
   left: 0;
-  clip-path: polygon(100% 68%, 0 100%, 100% 100%);
+  clip-path: polygon(0 20%, 50% 0, 0 0);
   max-width: 100%;
 }
+
 
 .homeHeading {
   text-align: center;
