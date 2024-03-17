@@ -1,3 +1,246 @@
+/* Hamburger icon */
+.hamburger-icon {
+  font-size: 32px;
+  cursor: pointer;
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 1000;
+  color: #878787;
+}
+
+.custom-overlay {
+  width: 100%;
+  height: 0;
+  top: 0;
+  background-color: rgb(255, 245, 245);
+  transition: height 0.5s, top 0.5s;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.logo {
+  margin: 10px;
+}
+
+.logo img {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+}
+
+.nav-link {
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Overlay Navbar */
+.overlay-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.header.active .overlay-navbar {
+  height: 100%;
+}
+
+/* Center the content inside the navbar */
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -25px;
+  margin-right: 80px;
+}
+
+.vertical-icons {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.vertical-icons .black-icon {
+  margin: 10px 0;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 25px;
+  margin-top: -300px;
+}
+
+.logo-icons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons .icon-wrapper {
+  margin: 10px 0;
+}
+
+.icons .black-icon {
+  margin: 10px 0;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icon-wrapper .black-icon {
+  margin-left: 10px;
+  font-size: 24px;
+  /* Adjust the icon size as needed */
+  color: #000;
+  /* Adjust the icon color as needed */
+  transition: color 0.2s, cursor 0.2s;
+  /* Add cursor transition for hover effect */
+
+  /* Add a hover effect to change the color and cursor */
+  &:hover {
+    color: #555;
+    /* Change the color on hover */
+    cursor: pointer;
+    /* Change the cursor to a pointer hand on hover */
+  }
+}
+
+.header.active .icons {
+  transform: translateX(0);
+}
+
+.black-icon {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #000;
+}
+
+/* Transition when active (X icon) */
+.line.active.line1 {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.line.active.line2 {
+  opacity: 0;
+}
+
+.line.active.line3 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+
+  /* Center the content in the mobile view */
+  .overlay-content {
+    text-align: center;
+    margin: -40px 0;
+  }
+
+  /* Adjust the logo image size and positioning */
+  .logo img {
+    max-width: 250px;
+    /* Set the maximum width of the logo image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+  }
+
+  .logo {
+    margin: 10px 0;
+    /* Reduce the margin between logo and links */
+  }
+
+  /* Split the links into two columns with two links in each */
+  .navbar-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    /* Add space between the columns and rows */
+    margin-left: 15px;
+    padding: 0;
+  }
+
+  .nav-item {
+    margin: 0;
+    /* Reset margin for individual items */
+  }
+
+  /* Style the links */
+  .nav-link {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    /* Add padding to the links for better clickability */
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+    /* Add a smooth hover effect */
+  }
+
+  .nav-item {
+    margin-bottom: 17px;
+  }
+
+
+  /* Center the icons at the bottom */
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjust the number of columns as needed */
+    gap: 20px;
+    /* Add space between icons */
+    margin: 20px 0;
+    margin-left: 35px;
+  }
+
+  .icon-wrapper {
+    margin: 0 20px;
+  }
+
+  .icon-wrapper .black-icon {
+    font-size: 24px;
+    color: #000;
+    transition: color 0.2s, cursor 0.2s;
+  }
+
+  .header.active .icons {
+    transform: translateY(0);
+  }
+}
+
 .speedDial {
   position: fixed;
   right: 3vmax;
@@ -5,6 +248,7 @@
 }
 
 .speedDialIcon {
+  object-fit: cover;
   width: 56px;
   height: 56px;
   border-radius: 100%;
