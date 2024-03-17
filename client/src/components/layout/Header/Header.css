@@ -34,10 +34,12 @@
 
 .logo img {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 3%;
+  border-radius: 3%;
 }
 
 .nav-link {
+  border: none;
+  background-color: transparent;
   color: #000;
   font-weight: bold;
   font-size: 18px;

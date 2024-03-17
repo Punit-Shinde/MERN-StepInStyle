@@ -10,8 +10,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 // import Logo from "../../../images/logo.png"
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate(); // Use useNavigate hook
   const { isAuthenticated } = useSelector((state) => state.user);
 
   const [isOpen, setIsOpen] = useState(
@@ -55,61 +57,54 @@ const Header = () => {
             <div className="links-and-icons">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a href="/" className="nav-link" onClick={closeNavbar}>
+                  <button className="nav-link" onClick={() => { navigate("/"); closeNavbar(); }}>
                     Home
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a
-                    href="/products"
-                    className="nav-link"
-                    onClick={closeNavbar}
-                  >
+                  <button className="nav-link" onClick={() => { navigate("/products"); closeNavbar(); }}>
                     Products
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a href="/contact" className="nav-link" onClick={closeNavbar}>
+                  <button className="nav-link" onClick={() => { navigate("/contact"); closeNavbar(); }}>
                     Contact
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a href="/about" className="nav-link" onClick={closeNavbar}>
+                  <button className="nav-link" onClick={() => { navigate("/about"); closeNavbar(); }}>
                     About
-                  </a>
+                  </button>
                 </li>
               </ul>
 
               <div className="icons">
                 <div className="icon-wrapper">
-                  <a href="/search" onClick={closeNavbar}>
+                  <button className="nav-link" onClick={() => { navigate("/search"); closeNavbar(); }}>
                     <FontAwesomeIcon
                       icon={faSearch}
                       size="lg"
                       className="black-icon"
                     />
-                  </a>
+                  </button>
                 </div>
                 <div className="icon-wrapper">
-                  <a
-                    href={isAuthenticated ? "./account" : "./login"}
-                    onClick={closeNavbar}
-                  >
+                  <button className="nav-link" onClick={() => { navigate(isAuthenticated ? "/account" : "/login"); closeNavbar(); }}>
                     <FontAwesomeIcon
                       icon={faUser}
                       size="lg"
                       className="black-icon"
                     />
-                  </a>
+                  </button>
                 </div>
                 <div className="icon-wrapper">
-                  <a href="/cart" onClick={closeNavbar}>
+                  <button className="nav-link" onClick={() => { navigate("/cart"); closeNavbar(); }}>
                     <FontAwesomeIcon
                       icon={faShoppingCart}
                       size="lg"
                       className="black-icon"
                     />
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -121,3 +116,4 @@ const Header = () => {
 };
 
 export default Header;
+
