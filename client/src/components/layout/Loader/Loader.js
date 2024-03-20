@@ -1,12 +1,13 @@
 import React from "react";
-import "./Loader.css";
+import loader from "../../../images/steps.gif";
+import "./Loader.css"
 
-const Loader = () => {
+const Loading = () => {
   return (
-    <div className="loading">
-      <div></div>
+<div className="loaderContainer">
+      <img  src={loader} alt="" />
     </div>
   );
 };
 
-export default Loader;
+export default Loading;

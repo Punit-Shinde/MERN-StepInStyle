@@ -1,24 +1,17 @@
-.loading {
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  display: grid;
-  place-items: center;
-  max-width: 100%;
+/* Assuming you have a parent container that wraps the entire screen */
+.loaderContainer {
+  background-color: #CFBBA9;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Set the container height to the full viewport height */
 }
 
-.loading > div {
-  width: 10vmax;
-  height: 10vmax;
-  border-bottom: 5px solid rgba(0, 0, 0, 0.719);
-
-  border-radius: 50%;
-
-  animation: loadingRotate 800ms linear infinite;
-}
-
-@keyframes loadingRotate {
-  to {
-    transform: rotateZ(-360deg);
-  }
+/* Style for the image */
+.loaderContainer img {
+  width:500px;
+  border-radius: 15px;
+background: linear-gradient(145deg, #baa898, #ddc8b5);
+box-shadow:  20px 20px 60px #b09f90,
+             -20px -20px 60px #eed7c2;
 }

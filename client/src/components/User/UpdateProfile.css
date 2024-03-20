@@ -5,18 +5,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(231, 231, 231);
+  background-color: #EDE1D1;
   position: fixed;
   top: 0%;
   left: 0;
 }
 
 .updateProfileBox {
-  background-color: white;
   width: 25vw;
   height: 70vh;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 15px;
+  background: #EDE1D1;
+  box-shadow: 20px 20px 60px #c9bfb2,
+    -20px -20px 60px #fffff0;
 }
 
 .updateProfileHeading {
@@ -40,13 +43,13 @@
   transition: all 0.5s;
 }
 
-.updateProfileForm > div {
+.updateProfileForm>div {
   display: flex;
   width: 100%;
   align-items: center;
 }
 
-.updateProfileForm > div > input {
+.updateProfileForm>div>input {
   padding: 1vmax 4vmax;
   padding-right: 1vmax;
   width: 100%;
@@ -57,24 +60,27 @@
   outline: none;
 }
 
-.updateProfileForm > div > svg {
+.updateProfileForm>div>svg {
   position: absolute;
   transform: translateX(1vmax);
   font-size: 1.6vmax;
   color: rgba(0, 0, 0, 0.623);
 }
 
-#updateProfileImage > img {
-  width: 3vmax;
+#updateProfileImage>img {
+  width: 3.5vmax;
+  height: 3.5vmax;
   border-radius: 100%;
   margin: 1vmax;
+  object-fit: cover;
 }
-#updateProfileImage > input {
+
+#updateProfileImage>input {
   display: flex;
   padding: 0%;
 }
 
-#updateProfileImage > input::file-selector-button {
+#updateProfileImage>input::file-selector-button {
   cursor: pointer;
   width: 100%;
   z-index: 2;
@@ -88,13 +94,13 @@
   background-color: rgb(255, 255, 255);
 }
 
-#updateProfileImage > input::file-selector-button:hover {
+#updateProfileImage>input::file-selector-button:hover {
   background-color: rgb(235, 235, 235);
 }
 
 .updateProfileBtn {
   border: none;
-  background-color: tomato;
+  background-color: #864D25;
   color: white;
   font: 300 0.9vmax "Roboto";
   width: 100%;
@@ -114,6 +120,7 @@
   .updateProfileContainer {
     background-color: white;
   }
+
   .updateProfileBox {
     width: 100vw;
     height: 95vh;
@@ -123,21 +130,21 @@
     padding: 5vmax;
   }
 
-  .updateProfileForm > div > input {
+  .updateProfileForm>div>input {
     padding: 2.5vmax 5vmax;
     font: 300 1.7vmax cursive;
   }
 
-  .updateProfileForm > div > svg {
+  .updateProfileForm>div>svg {
     font-size: 2.8vmax;
   }
 
-  #updateProfileImage > img {
+  #updateProfileImage>img {
     width: 8vmax;
     border-radius: 100%;
   }
 
-  #updateProfileImage > input::file-selector-button {
+  #updateProfileImage>input::file-selector-button {
     height: 7vh;
     font: 400 1.8vmax cursive;
   }

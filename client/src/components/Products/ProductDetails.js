@@ -73,7 +73,7 @@ const ProductDetails = () => {
                 ))}
               </Carousel>
             </div>
-            <div>
+            <div > 
               <div className="detailsBlock-1">
                 <h2>{product.name}</h2>
                 <p>Product # {product._id}</p>

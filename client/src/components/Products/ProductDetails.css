@@ -1,5 +1,4 @@
 .ProductDetails {
-  background-color: rgb(255, 255, 255);
   width: 100vw;
   height: 100vh;
   max-width: 100%;
@@ -9,6 +8,7 @@
 }
 
 .ProductDetails>div {
+  background-color: #DDC5A7;
   width: 100%;
   height: 100% !important;
   display: flex;
@@ -18,6 +18,7 @@
   padding: 2vmax;
   box-sizing: border-box;
   border: 1px solid rgb(215, 212, 212);
+  
 }
 
 .ProductDetails>div:last-child {
@@ -110,7 +111,7 @@
   cursor: pointer;
   color: white;
   transition: all 0.5s;
-  background-color: tomato;
+  background-color: #864D25;
   font: 500 0.7vmax "Roboto";
   border-radius: 20px;
   padding: 0.5vmax 2vmax;
@@ -143,7 +144,7 @@
 
 .submitReview {
   border: none;
-  background-color: tomato;
+  background-color: #864D25;
   font: 500 0.7vmax "Roboto";
   border-radius: 20px;
   padding: 0.6vmax 2vmax;
@@ -189,8 +190,9 @@
 }
 
 .reviewCard {
-  flex: none;
+  background-color: #DDC5A7;
 
+  flex: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
   border: 1px solid rgba(56, 56, 56, 0.116);
   width: 30vmax;

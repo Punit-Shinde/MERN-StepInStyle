@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react";
 import "./Header.css";
 import { SpeedDial, SpeedDialAction } from "@mui/material";
-import Backdrop from '@mui/material/Backdrop'
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import Backdrop from "@mui/material/Backdrop";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import ListAltIcon from "@mui/icons-material/ListAlt";
@@ -24,9 +24,9 @@ const UserOptions = ({ user }) => {
     { icon: <ListAltIcon />, name: "Orders", func: orders },
     { icon: <PersonIcon />, name: "Profile", func: account },
     {
-      icon: ( 
+      icon: (
         <ShoppingCartIcon
-          style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
+          style={{ color: cartItems.length > 0 ? "#864D25" : "unset" }}
         />
       ),
       name: `Cart(${cartItems.length})`,
@@ -57,7 +57,7 @@ const UserOptions = ({ user }) => {
   }
   function logoutUser() {
     dispatch(logout());
-    navigate("/")
+    navigate("/");
     alert.success("Logout Successfully");
   }
 

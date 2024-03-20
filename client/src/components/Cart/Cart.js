@@ -3,14 +3,15 @@ import "./Cart.css";
 import CartItemCard from "./CartItemCard";
 import { useSelector, useDispatch } from "react-redux";
 import { addItemsToCart, removeItemsFromCart } from "../../actions/cart.Action";
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
-import Typography from '@mui/material/Typography';
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+import Typography from "@mui/material/Typography";
 import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { cartItems } = useSelector((state) => state.cart);
+  const { isAuthenticated } = useSelector((state) => state.user);
 
   const increaseQuantity = (id, quantity, stock) => {
     const newQty = quantity + 1;
@@ -33,7 +34,11 @@ const Cart = () => {
   };
 
   const checkoutHandler = () => {
-    navigate("/login?redirect=shipping");
+    if (isAuthenticated) {
+      navigate("/shipping")
+    } else {
+      navigate("/login?redirect=shipping");
+    }
   };
 
   return (

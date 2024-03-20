@@ -6,14 +6,15 @@
   top: 22px;
   left: 22px;
   z-index: 1000;
-  color: #878787;
+  color: #864D25;
+  
 }
 
 .custom-overlay {
   width: 100%;
   height: 0;
   top: 0;
-  background-color: rgb(255, 245, 245);
+  background-color: #EDE1D1;
   transition: height 0.5s, top 0.5s;
 }
 
@@ -33,14 +34,17 @@
 }
 
 .logo img {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 3%;
+  border-radius: 15px;
+background: #EDE1D1;
+box-shadow:  20px 20px 60px #c9bfb2,
+             -20px -20px 60px #fffff0;
+  max-width: 400px;
 }
 
 .nav-link {
   border: none;
   background-color: transparent;
-  color: #000;
+  color: #864D25;
   font-weight: bold;
   font-size: 18px;
   text-decoration: none;
@@ -50,8 +54,8 @@
 }
 
 .nav-link:hover {
-  background-color: #555;
-  color: #fff;
+  background-color: #DDC5A7;
+  color: #7A4621;
 }
 
 /* Overlay Navbar */
@@ -79,6 +83,7 @@
   height: 100%;
   margin-top: -25px;
   margin-right: 80px;
+  
 }
 
 .vertical-icons {
@@ -95,7 +100,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 25px;
+  margin-right: 1px;
   margin-top: -300px;
 }
 
@@ -120,20 +125,17 @@
 }
 
 .icon-wrapper .black-icon {
-  margin-left: 10px;
+  /* margin-left: 1px; */
   font-size: 24px;
-  /* Adjust the icon size as needed */
-  color: #000;
-  /* Adjust the icon color as needed */
+  color: #864D25;
+ 
   transition: color 0.2s, cursor 0.2s;
-  /* Add cursor transition for hover effect */
-
-  /* Add a hover effect to change the color and cursor */
+  
   &:hover {
-    color: #555;
-    /* Change the color on hover */
+    color: #EDE1D1;
+
     cursor: pointer;
-    /* Change the cursor to a pointer hand on hover */
+
   }
 }
 
@@ -144,7 +146,7 @@
 .black-icon {
   font-size: 24px;
   margin: 0 10px;
-  color: #000;
+  color: #5A189A;
 }
 
 /* Transition when active (X icon) */
@@ -245,8 +247,8 @@
 
 .speedDial {
   position: fixed;
-  right: 3vmax;
-  top: 3vmax;
+  right: 2vmax;
+  top: 1.4vmax;
 }
 
 .speedDialIcon {

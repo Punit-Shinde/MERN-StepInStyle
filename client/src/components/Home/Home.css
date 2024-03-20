@@ -1,48 +1,58 @@
 .banner {
-  background-image: url("../../images/cover.jpg");
+  background-image: url("../../images/shoes\ 1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vmin;
+  height: 96vmin;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #EDE1D1;
 }
 
-.banner > h1 {
+.banner>h1 {
   margin: 5vmax;
-
-  font: 600 2.5vmax "Roboto";
+  font: 500 6vmax "Roboto";
+  text-shadow: 2px 2px 8px #000000;
+}
+.banner>h1>span {
+  color: #7A4621;
+}
+.banner>p {
+  font: 400 5vmax "Lucida Sans";
+  text-shadow: 2px 2px 8px #000000;
+}
+.banner>p>span {
+  color: #864D25;
 }
 
-.banner > p {
-  font: 300 1.4vmax "Lucida Sans";
-}
-
-.banner > a > button {
+.banner>a>button {
   margin-bottom: 5vmax;
   cursor: pointer;
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 0;
+  background-color: #7A4621;
+  border: 1px solid #412E27;
+  border-radius: 15px;
   padding: 1vmax;
   transition: all 0.5s;
   width: 9vmax;
-  font: 500 1vmax "Roboto";
+  font: 600 1vmax "Roboto";
+  color: #EDE1D1;
 }
-.banner > a > button:hover {
+
+.banner>a>button:hover {
   background-color: rgba(255, 255, 255, 0);
-  color: white;
+  color: #864D25;
+  font: 600 1vmax "Roboto";
+  border: 2px solid #864D25;
 }
 
 .banner::before {
   content: "";
   width: 100vw;
   height: 100vmin;
-  background-color: #ffffff;
+  background-color: #EDE1D1;
   position: absolute;
   top: 0%;
   left: 0;
@@ -54,7 +64,7 @@
   content: "";
   width: 100vw;
   height: 100vmin;
-  background-color: #ffffff;
+  background-color: #EDE1D1;
   position: absolute;
   top: 0%;
   left: 0;
@@ -71,7 +81,7 @@
   width: 20vmax;
   padding: 1vmax;
   margin: 5vmax auto;
-  color: rgb(0, 0, 0, 0.7);
+  color: #412E27;
 }
 
 .container {
@@ -84,21 +94,34 @@
 }
 
 .productCard {
-  width: 14vmax;
+  width: 200px;
+  height: 300px; 
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: rgb(48, 48, 48);
-  margin: 2vmax;
+  color: #412E27;
+  margin: 20px;
   transition: all 0.5s;
-  padding-bottom: 0.5vmax;
+  padding: 10px; 
+  border: 1px solid #DDC5A7; 
 }
 
-.productCard > img {
-  width: 14vmax;
+.productCard .imageContainer {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.productCard > div {
+.productCard .imageContainer img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+.productCard>div {
   margin: 0.5vmax;
   display: flex;
   justify-content: flex-start;
@@ -110,41 +133,40 @@
   font: 300 0.7vmax "Roboto";
 }
 
-.productCard > p {
+.productCard>p {
   font-family: "Roboto";
   font-size: 1.2vmax;
   margin: 1vmax 0.5vmax;
   margin-bottom: 0;
 }
 
-.productCard > span {
+.productCard>span {
   margin: 0.5vmax;
-  color: tomato;
+  color: #864D25;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1vmax;
 }
 
 .productCard:hover {
-  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
-
+  box-shadow: 0 0 5px #7A4621;
   transform: translateY(-1vmax);
 }
 
 @media screen and (max-width: 600px) {
-  .productCard > p {
+  .productCard>p {
     font-size: 1.7vmax;
   }
 
-  .productCard > div {
+  .productCard>div {
     margin: 0vmax;
     display: block;
   }
 
-  .productCard > span {
+  .productCard>span {
     font-size: 1.5vmax;
   }
 
-  .productCard > div > span {
+  .productCard>div>span {
     margin: 0 0.5vmax;
     font: 300 1vmax "Roboto";
   }

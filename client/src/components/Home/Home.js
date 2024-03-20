@@ -3,14 +3,11 @@ import { CgMouse } from "react-icons/cg";
 import "./Home.css";
 import ProductCard from "./ProductCard.js";
 import MetaData from "../layout/MetaData";
-import {
-  clearErrors,
-  // clearErrors,
-  getProduct,
-} from "../../actions/product.Action.js";
+import { clearErrors, getProduct } from "../../actions/product.Action.js";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
+import SearchBar from "../layout/Header/SearchBar";
 
 const Home = () => {
   const alert = useAlert();
@@ -33,10 +30,14 @@ const Home = () => {
       ) : (
         <Fragment>
           <MetaData title="ECOMMERCE" />
-
+          <SearchBar/>;
           <div className="banner">
-            <p>Welcome to Ecommerce</p>
-            <h1>FIND AMAZING PRODUCTS BELOW</h1>
+            <h1>
+              <span>Step</span>In<span>Style</span>
+            </h1>
+            <p>
+              Where Every <span>Step</span> Becomes a <span>Statement</span>
+            </p>
 
             <a href="#container">
               <button>

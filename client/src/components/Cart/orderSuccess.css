@@ -8,14 +8,17 @@
   justify-content: center;
   align-items: center;
 }
-.orderSuccess > svg {
+
+.orderSuccess>svg {
   font-size: 7vmax;
-  color: tomato;
+  color: #864D25;
 }
-.orderSuccess > p {
+
+.orderSuccess>p {
   font-size: 2vmax;
 }
-.orderSuccess > a {
+
+.orderSuccess>a {
   background-color: rgb(51, 51, 51);
   color: white;
   border: none;
@@ -27,16 +30,17 @@
 }
 
 @media screen and (max-width: 600px) {
-  .orderSuccess > a {
+  .orderSuccess>a {
     padding: 3vw 6vw;
     font: 400 4vw "Roboto";
     margin: 2vmax;
   }
 
-  .orderSuccess > svg {
+  .orderSuccess>svg {
     font-size: 20vw;
   }
-  .orderSuccess > p {
+
+  .orderSuccess>p {
     margin: 2vmax;
     font-size: 5vw;
   }

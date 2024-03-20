@@ -10,10 +10,11 @@
 
 .products {
   display: flex;
+  margin: 2vmax auto;
+  width: 80vw;
   flex-wrap: wrap;
-  padding: 0 5vmax;
   justify-content: center;
-  min-height: 30vh;
+  max-width: 100%;
 }
 
 .paginationBox {
@@ -36,6 +37,7 @@
   transition: all 0.3s;
   cursor: pointer;
 }
+
 .page-item:first-child {
   border-radius: 5px 0 0 5px;
 }
@@ -43,6 +45,7 @@
 .page-item:last-child {
   border-radius: 0 5px 5px 0;
 }
+
 .page-link {
   text-decoration: none;
   font: 300 0.7vmax "Roboto";
@@ -59,7 +62,7 @@
 }
 
 .pageItemActive {
-  background-color: tomato;
+  background-color: #864D25;
 }
 
 .pageLinkActive {
@@ -85,11 +88,12 @@
   cursor: pointer;
   transition: all 0.5s;
 }
+
 .category-link:hover {
-  color: tomato;
+  color: #864D25;
 }
 
-.filterBox > fieldset {
+.filterBox>fieldset {
   border: 1px solid rgba(0, 0, 0, 0.329);
 }
 
@@ -103,6 +107,7 @@
   .page-link {
     font: 300 1.7vmax "Roboto";
   }
+
   .category-link {
     font: 400 1.8vmax "Roboto";
   }

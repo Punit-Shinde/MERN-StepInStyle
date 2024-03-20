@@ -9,7 +9,7 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
-// import Logo from "../../../images/logo.png"
+import Logo from "../../../images/logo.png"
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -48,7 +48,7 @@ const Header = () => {
         <div className="overlay-content">
           <div className="logo">
             <img
-              src={""}
+              src={Logo}
               alt="Logo"
             />
           </div>
@@ -79,15 +79,6 @@ const Header = () => {
               </ul>
 
               <div className="icons">
-                <div className="icon-wrapper">
-                  <button className="nav-link" onClick={() => { navigate("/search"); closeNavbar(); }}>
-                    <FontAwesomeIcon
-                      icon={faSearch}
-                      size="lg"
-                      className="black-icon"
-                    />
-                  </button>
-                </div>
                 <div className="icon-wrapper">
                   <button className="nav-link" onClick={() => { navigate(isAuthenticated ? "/account" : "/login"); closeNavbar(); }}>
                     <FontAwesomeIcon

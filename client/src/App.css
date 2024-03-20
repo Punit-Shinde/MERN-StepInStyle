@@ -1,11 +1,12 @@
 * {
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 
-/* body {
-  cursor: url("./images/cursor.png"), auto;
-} */
+body {
+ background-color: #EDE1D1;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

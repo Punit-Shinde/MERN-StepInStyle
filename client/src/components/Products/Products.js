@@ -9,6 +9,7 @@ import Pagination from "react-js-pagination";
 import { Slider, Typography } from "@mui/material";
 import { useAlert } from "react-alert";
 import MetaData from "../layout/MetaData";
+import SearchBar from "../layout/Header/SearchBar";
 
 const categories = [
   "Laptop",
@@ -67,6 +68,7 @@ const Products = () => {
       ) : (
         <Fragment>
           <MetaData title="PRODUCTS -- ECOMMERCE" />
+          <SearchBar/>
           <h2 className="productsHeading">Products</h2>
 
           <div className="products">
