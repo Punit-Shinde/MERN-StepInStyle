@@ -26,6 +26,7 @@ import Payment from "./components/Cart/Payment.js";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import OrderSuccess from "./components/Cart/OrderSuccess.js";
+import ScrollToTop from "./components/layout/ScrollToTop.js";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -52,6 +53,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop/>
         <Header />
         {isAuthenticated && <UserOptions user={user} />}
         <ProtectedRoute exact path="/account" element={<Profile />} />

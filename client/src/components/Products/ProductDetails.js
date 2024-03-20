@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { clearErrors, getProductDetails } from "../../actions/product.Action";
 import ReactStars from "react-rating-stars-component";
 import "./ProductDetails.css";
@@ -9,11 +9,13 @@ import ReviewCard from "./ReviewCard";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import { addItemsToCart } from "../../actions/cart.Action";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const alert = useAlert();
+  const navigate = useNavigate()
 
   const { product, loading, error } = useSelector(
     (state) => state.productDetails
@@ -61,6 +63,9 @@ const ProductDetails = () => {
       ) : (
         <Fragment>
           <div className="ProductDetails">
+          <button className="backbtnDpage" onClick={() => navigate(-1)}>
+              <ArrowBackIosNewIcon/>Go Back
+            </button>
             <div>
               <Carousel className="carousel">
                 {product.images?.map((item, i) => (

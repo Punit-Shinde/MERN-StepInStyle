@@ -1,6 +1,5 @@
 .confirmOrderPage {
   height: 100vh;
-  background-color: white;
   display: grid;
   grid-template-columns: 6fr 3fr;
 }
@@ -112,6 +111,7 @@
 
 .orderSummary>button {
   background-color: #864D25;
+  border-radius: 10px;
   color: white;
   width: 100%;
   padding: 1vmax;
@@ -122,8 +122,12 @@
   font: 400 1vmax "Roboto";
 }
 
-.orderSummary>button:hover {
+/* .orderSummary>button:hover {
   background-color: rgb(192, 71, 50);
+} */
+.orderSummary>button:hover {
+  background-color: #DDC5A7;
+  color:#864D25
 }
 
 @media screen and (max-width: 600px) {

@@ -75,9 +75,20 @@
   top: 10vmax;
   left: 4vmax;
 }
-
+.backbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #864D25;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 3vh;
+  cursor: pointer;
+}
 .categoryBox {
   padding: 0%;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .category-link {
@@ -96,6 +107,7 @@
 .filterBox>fieldset {
   border: 1px solid rgba(0, 0, 0, 0.329);
 }
+
 
 @media screen and (max-width: 600px) {
   .filterBox {

@@ -6,7 +6,19 @@
   box-sizing: border-box;
   display: flex;
 }
-
+.backbtnDpage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #864D25;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 3vh;
+  cursor: pointer; 
+  margin: 1vmax;
+  font-weight: 500;
+  font-size: larger;
+}
 .ProductDetails>div {
   background-color: #DDC5A7;
   width: 100%;
@@ -191,7 +203,6 @@
 
 .reviewCard {
   background-color: #DDC5A7;
-
   flex: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
   border: 1px solid rgba(56, 56, 56, 0.116);

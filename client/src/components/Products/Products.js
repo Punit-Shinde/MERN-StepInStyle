@@ -2,11 +2,12 @@ import React, { Fragment, useEffect, useState } from "react";
 import "./Products.css";
 import { useSelector, useDispatch } from "react-redux";
 import { clearErrors, getProduct } from "../../actions/product.Action";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Loader from "../layout/Loader/Loader";
 import ProductCard from "../Home/ProductCard";
 import Pagination from "react-js-pagination";
 import { Slider, Typography } from "@mui/material";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { useAlert } from "react-alert";
 import MetaData from "../layout/MetaData";
 import SearchBar from "../layout/Header/SearchBar";
@@ -25,6 +26,7 @@ const categories = [
 const Products = () => {
   const { keyword } = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const alert = useAlert();
 
@@ -79,6 +81,10 @@ const Products = () => {
           </div>
 
           <div className="filterBox">
+            <button className="backbtn" onClick={() => navigate("/")}>
+              <ArrowBackIosNewIcon/>Go Back
+            </button>
+            
             <Typography>Price</Typography>
             <Slider
               value={price}
@@ -89,8 +95,8 @@ const Products = () => {
               max={25000}
             />
 
-            <Typography>Categories</Typography>
             <ul className="categoryBox">
+            <Typography>Categories</Typography>
               {categories.map((category) => (
                 <li
                   className="category-link"
@@ -116,7 +122,7 @@ const Products = () => {
               />
             </fieldset>
           </div>
-          {resultPerPage < count && (
+          {resultPerPage <= count && (
             <div className="paginationBox">
               <Pagination
                 activePage={currentPage}

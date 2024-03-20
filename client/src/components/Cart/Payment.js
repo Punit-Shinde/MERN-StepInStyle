@@ -14,7 +14,7 @@ import {
 
 import axios from "axios";
 import "./payment.css";
-import CreditCardIcon from '@mui/icons-material/CreditCard';
+import CreditCardIcon from "@mui/icons-material/CreditCard";
 import EventIcon from "@mui/icons-material/Event";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +22,7 @@ import { createOrder, clearErrors } from "../../actions/order.Action";
 
 const Payment = () => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
-const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const alert = useAlert();
   const stripe = useStripe();
@@ -97,7 +97,7 @@ const navigate = useNavigate()
 
           dispatch(createOrder(order));
 
-        navigate("/success");
+          navigate("/success");
         } else {
           alert.error("There's some issue while processing payment ");
         }
@@ -142,6 +142,13 @@ const navigate = useNavigate()
             className="paymentFormBtn"
           />
         </form>
+        <h3>NOTE</h3>
+        <p>This is a dummy card details for payment demonstration.</p>
+        <p>
+          #Use card no: 4000003560000008 #Use a valid future date, such as
+          12/34. #Use any three-digit CVC (four digits for American Express
+          cards).
+        </p>
       </div>
     </Fragment>
   );
