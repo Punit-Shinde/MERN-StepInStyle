@@ -1,11 +1,23 @@
 .contactContainer {
+  margin-top: 0;
   height: 100vh;
   width: 100vw;
   max-width: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
   position: fixed;
+}
+.contactContainer> h1{
+  margin-top: 8vmax;
+}
+
+.contactContainer> p{
+  margin-top: 3vmax;
+  padding: 0 10vmax;
+  font-size: larger;
+  font-weight: 300;
 }
 
 .mailBtn {
@@ -15,10 +27,14 @@
 }
 
 .mailBtn > button {
-  text-decoration: none;
+  margin-top: 1vmax;
+  color: aliceblue;
+border: 1px solid  #7A4621;
+border-radius: 15px;
+background-color: #7A4621;
   font: 200 2vmax "Roboto";
   cursor: url("https://img.icons8.com/color/48/000000/edit--v2.png"), pointer;
-  padding: 2vmax;
+  padding: 1vmax;
 }
 
 @keyframes mailBtnAnimation {

@@ -4,6 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import {
   productReducer,
   productDetailsReducer,
+  newReviewReducer,
 } from "../reducers/product.Reducer";
 import { profileReducer, userReducer } from "../reducers/user.Reducer";
 import { cartReducer } from "../reducers/cart.Reducer";
@@ -16,18 +17,19 @@ const reducer = combineReducers({
   profile: profileReducer,
   cart: cartReducer,
   newOrder: newOrderReducer,
+  newReview: newReviewReducer,
 });
 
-let initialState = {
-  cart: {
-    cartItems: localStorage.getItem("cartItems")
-      ? JSON.parse(localStorage.getItem("cartItems"))
-      : [],
-    shippingInfo: localStorage.getItem("shippingInfo")
-      ? JSON.parse(localStorage.getItem("shippingInfo"))
-      : {},
-  },
-};
+// let initialState = {
+//   cart: {
+//     cartItems: localStorage.getItem("cartItems")
+//       ? JSON.parse(localStorage.getItem("cartItems"))
+//       : [],
+//     shippingInfo: localStorage.getItem("shippingInfo")
+//       ? JSON.parse(localStorage.getItem("shippingInfo"))
+//       : {},
+//   },
+// };
 
 const middleware = [thunk];
 

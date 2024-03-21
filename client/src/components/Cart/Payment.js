@@ -145,7 +145,7 @@ const Payment = () => {
         <h3>NOTE</h3>
         <p>This is a dummy card details for payment demonstration.</p>
         <p>
-          #Use card no: 4000003560000008 #Use a valid future date, such as
+          #Use card no: 4000-0035-6000-0008 #Use a valid future date, such as
           12/34. #Use any three-digit CVC (four digits for American Express
           cards).
         </p>

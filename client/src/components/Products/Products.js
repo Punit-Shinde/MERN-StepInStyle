@@ -13,14 +13,12 @@ import MetaData from "../layout/MetaData";
 import SearchBar from "../layout/Header/SearchBar";
 
 const categories = [
-  "Laptop",
-  "Footwear",
-  "Bottom",
-  "Tops",
-  "Attire",
-  "Camera",
-  "Sneakers",
-  "SmartPhones",
+  "Boots",
+  "Casuals",
+  "Clogs",
+  "Sandals",
+  "Slippers",
+  "Sneakers"
 ];
 
 const Products = () => {
@@ -131,7 +129,7 @@ const Products = () => {
                 onChange={setCurrentPageNo}
                 nextPageText="Next"
                 prevPageText="Prev"
-                firstPageText="1st"
+                firstPageText="First"
                 lastPageText="Last"
                 itemClass="page-item"
                 linkClass="page-link"

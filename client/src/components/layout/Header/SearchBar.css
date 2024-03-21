@@ -3,9 +3,10 @@
   max-width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: fixed;
   top: 22px;
-  left: 0;
+  left: 25%;
   z-index: 9;
 }
 
@@ -44,13 +45,14 @@
 @media screen and (max-width: 600px) {
   .searchBarBox>input[type="text"] {
     width: 100%;
-    font: 300 4vw cursive;
+    font: 300 3vw cursive;
     height: 10%;
   }
 
   .searchBarBox>input[type="submit"] {
     height: 10%;
+    padding-left: 15px;
     width: 30%;
-    font: 300 4vw "Roboto";
+    font: 300 3vw "Roboto";
   }
 }

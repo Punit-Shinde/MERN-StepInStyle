@@ -52,7 +52,7 @@
   content: "";
   width: 100vw;
   height: 100vmin;
-  background-color: #EDE1D1;
+  background-color: #EBE6DF;
   position: absolute;
   top: 0%;
   left: 0;
@@ -64,7 +64,7 @@
   content: "";
   width: 100vw;
   height: 100vmin;
-  background-color: #EDE1D1;
+  background-color: #EBE6DF;
   position: absolute;
   top: 0%;
   left: 0;
@@ -84,13 +84,28 @@
   color: #412E27;
 }
 
+.toProductsBtn{
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+  background-color: #864D25;
+  font: 500 0.9vmax "Roboto";
+  border-radius: 20px;
+  padding: 0.5vmax 2vmax;
+  margin-top: 1vmax;
+  margin-left: calc(50% - (100px));
+  outline: none;
+}
+
 .container {
   display: flex;
   margin: 2vmax auto;
-  width: 80vw;
+  width: 60vw;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 100%;
+  max-width: 100%; 
 }
 
 .productCard {
@@ -102,7 +117,8 @@
   color: #412E27;
   margin: 20px;
   transition: all 0.5s;
-  padding: 10px; 
+  padding: 10px;
+  background-color: rgb(255, 255, 255); 
   border: 1px solid #DDC5A7; 
 }
 
@@ -117,12 +133,11 @@
 .productCard .imageContainer img {
   width: 100%; 
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
  
 }
 
 .productCard>div {
-  margin: 0.5vmax;
   display: flex;
   justify-content: flex-start;
   align-items: center;

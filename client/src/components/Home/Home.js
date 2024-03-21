@@ -8,10 +8,12 @@ import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import SearchBar from "../layout/Header/SearchBar";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const { loading, error, products, productsCount } = useSelector(
     (state) => state.products
   );
@@ -54,6 +56,8 @@ const Home = () => {
                 <ProductCard key={product._id} product={product} />
               ))}
           </div>
+
+          <button className="toProductsBtn" onClick={()=> navigate("/products")}>View More Products</button>
         </Fragment>
       )}
     </Fragment>

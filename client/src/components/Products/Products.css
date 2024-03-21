@@ -1,5 +1,5 @@
 .productsHeading {
-  margin: 2vmax auto;
+  margin: 4vmax auto;
   width: 15vw;
   border-bottom: 1px solid rgba(0, 0, 0, 0.171);
   padding: 2vmax;
@@ -11,7 +11,7 @@
 .products {
   display: flex;
   margin: 2vmax auto;
-  width: 80vw;
+  width: 60vw;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
@@ -71,10 +71,11 @@
 
 .filterBox {
   width: 10vmax;
-  position: absolute;
+  position: fixed;
   top: 10vmax;
   left: 4vmax;
 }
+
 .backbtn{
   display: flex;
   justify-content: center;
@@ -84,6 +85,8 @@
   border: none;
   margin-bottom: 3vh;
   cursor: pointer;
+  font-size: x-large;
+  font-weight: 600;
 }
 .categoryBox {
   padding: 0%;

@@ -29,6 +29,19 @@
   margin: 2vmax;
 }
 
+.continueShopBtn{
+  border: none;
+  background-color: #864D25;
+  color: white;
+  font: 300 0.9vmax "Roboto";
+  width: fit-content;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+  border-radius: 15px;
+}
+
 @media screen and (max-width: 600px) {
   .orderSuccess>a {
     padding: 3vw 6vw;

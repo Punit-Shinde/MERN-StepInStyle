@@ -10,7 +10,6 @@ import About from "./components/layout/About/About.js";
 import Home from "./components/Home/Home.js";
 import ProductDetails from "./components/Products/ProductDetails.js";
 import Products from "./components/Products/Products.js";
-
 import LoginSignUp from "./components/User/LoginSignUp.js";
 import UpdateProfile from "./components/User/UpdateProfile.js";
 import Profile from "./components/User/Profile.js";
@@ -27,6 +26,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import OrderSuccess from "./components/Cart/OrderSuccess.js";
 import ScrollToTop from "./components/layout/ScrollToTop.js";
+import NotFound from "./components/layout/Not Found/NotFound.js";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -65,10 +65,10 @@ function App() {
           path="/order/confirm"
           element={<ConfirmOrder />}
         />
-
-        <Elements stripe={loadStripe(stripeApiKey)}>
+{stripeApiKey && <ProtectedRoute exact path="/process/payment" element={<Elements stripe={loadStripe(stripeApiKey)}><Payment/></Elements>}/>}
+        {/* <Elements stripe={loadStripe(stripeApiKey)}>
           <ProtectedRoute exact path="/process/payment" element={<Payment />} />
-        </Elements>
+        </Elements> */}
 
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -79,6 +79,11 @@ function App() {
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/about" element={<About />} />
+          <Route
+          component={
+            window.location.pathname === "/process/payment" ? null : NotFound
+          }
+        />
         </Routes>
 
         <Footer />

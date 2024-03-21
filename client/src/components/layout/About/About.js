@@ -1,46 +1,42 @@
 import React from "react";
 import "./aboutSection.css";
-import { Button, Typography, Avatar } from "@mui/material";
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import InstagramIcon from "@mui/icons-material/Instagram";
+import { Typography, Avatar } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const About = () => {
-  const visitInstagram = () => {
-    window.location = "https://instagram.com/meabhisingh";
-  };
+ 
   return (
     <div className="aboutSection">
       <div></div>
       <div className="aboutSectionGradient"></div>
       <div className="aboutSectionContainer">
-        <Typography component="h1">About Us</Typography>
+        <Typography component="h1">About Me</Typography>
 
         <div>
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
+              src="https://avatars.githubusercontent.com/u/135614556?s=400&u=9210fd3b05d4deb424991b3005f21a856ced63a5&v=4"
               alt="Founder"
             />
-            <Typography>Abhishek Singh</Typography>
-            <Button onClick={visitInstagram} color="primary">
-              Visit Instagram
-            </Button>
+            <Typography>Punit Shinde</Typography>
+            
             <span>
-              This is a sample wesbite made by @meabhisingh. Only with the
-              purpose to teach MERN Stack on the channel 6 Pack Programmer
+              This is a sample ecommerce wesbite. Only with the
+              purpose to learn and apply MERN Stack.
             </span>
           </div>
           <div className="aboutSectionContainer2">
-            <Typography component="h2">Our Brands</Typography>
+            <Typography component="h2">My Handles</Typography>
             <a
-              href="https://www.youtube.com/channel/UCO7afj9AUo0zV69pqEYhcjw"
+              href="https://github.com/Punit-Shinde"
               target="blank"
             >
-              <YouTubeIcon className="youtubeSvgIcon" />
+              <GitHubIcon className="githubSvgIcon" />
             </a>
 
-            <a href="https://instagram.com/meabhisingh" target="blank">
-              <InstagramIcon className="instagramSvgIcon" />
+            <a href="https://www.linkedin.com/in/punit-shinde/" target="blank">
+              <LinkedInIcon className="linkedinSvgIcon" />
             </a>
           </div>
         </div>
