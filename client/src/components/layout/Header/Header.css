@@ -6,8 +6,8 @@
   top: 22px;
   left: 22px;
   z-index: 1000;
-  color: #C06F35;
-
+  color: #864D25;
+  
 }
 
 .custom-overlay {
@@ -35,16 +35,16 @@
 
 .logo img {
   border-radius: 15px;
-  background: #EDE1D1;
-  box-shadow: 20px 20px 60px #c9bfb2,
-    -20px -20px 60px #fffff0;
+background: #EDE1D1;
+box-shadow:  20px 20px 60px #c9bfb2,
+             -20px -20px 60px #fffff0;
   max-width: 400px;
 }
 
 .nav-link {
   border: none;
   background-color: transparent;
-  color: #C06F35;
+  color: #864D25;
   font-weight: bold;
   font-size: 18px;
   text-decoration: none;
@@ -55,7 +55,7 @@
 
 .nav-link:hover {
   background-color: #DDC5A7;
-  color: #C06F35;
+  color: #7A4621;
 }
 
 /* Overlay Navbar */
@@ -83,7 +83,7 @@
   height: 100%;
   margin-top: -25px;
   margin-right: 80px;
-
+  
 }
 
 .vertical-icons {
@@ -127,10 +127,10 @@
 .icon-wrapper .black-icon {
   /* margin-left: 1px; */
   font-size: 24px;
-  color: #C06F35;
-
+  color: #864D25;
+ 
   transition: color 0.2s, cursor 0.2s;
-
+  
   &:hover {
     color: #EDE1D1;
 
