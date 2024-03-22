@@ -11,7 +11,7 @@
 
 .orderSuccess>svg {
   font-size: 7vmax;
-  color: #864D25;
+  color: #C06F35;
 }
 
 .orderSuccess>p {
@@ -29,9 +29,9 @@
   margin: 2vmax;
 }
 
-.continueShopBtn{
+.continueShopBtn {
   border: none;
-  background-color: #864D25;
+  background-color: #C06F35;
   color: white;
   font: 300 0.9vmax "Roboto";
   width: fit-content;

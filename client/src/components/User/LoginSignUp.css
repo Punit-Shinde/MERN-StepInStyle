@@ -38,11 +38,11 @@
 }
 
 .login_signUp_toggle>p:hover {
-  color: #864D25;
+  color: #C06F35;
 }
 
 .LoginSignUpBox>div>button {
-  background-color: #864D25;
+  background-color: #C06F35;
   height: 3px;
   width: 50%;
   border: none;
@@ -135,7 +135,7 @@
 .loginBtn,
 .signUpBtn {
   border: none;
-  background-color: #864D25;
+  background-color: #C06F35;
   color: white;
   font: 300 0.9vmax "Roboto";
   width: 100%;

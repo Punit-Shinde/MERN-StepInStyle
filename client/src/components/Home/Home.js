@@ -34,6 +34,7 @@ const Home = () => {
           <MetaData title="ECOMMERCE" />
           <SearchBar/>;
           <div className="banner">
+            <div className="banner-content">
             <h1>
               <span>Step</span>In<span>Style</span>
             </h1>
@@ -46,6 +47,7 @@ const Home = () => {
                 Scroll <CgMouse />
               </button>
             </a>
+            </div>
           </div>
 
           <h2 className="homeHeading">Featured Products</h2>

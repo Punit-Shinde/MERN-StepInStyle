@@ -62,7 +62,7 @@
 }
 
 .pageItemActive {
-  background-color: #864D25;
+  background-color: #C06F35;
 }
 
 .pageLinkActive {
@@ -76,11 +76,11 @@
   left: 4vmax;
 }
 
-.backbtn{
+.backbtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #864D25;
+  color: #C06F35;
   background-color: transparent;
   border: none;
   margin-bottom: 3vh;
@@ -88,6 +88,7 @@
   font-size: x-large;
   font-weight: 600;
 }
+
 .categoryBox {
   padding: 0%;
   margin-top: 3vh;
@@ -104,7 +105,7 @@
 }
 
 .category-link:hover {
-  color: #864D25;
+  color: #C06F35;
 }
 
 .filterBox>fieldset {
