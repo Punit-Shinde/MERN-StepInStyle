@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
     "country-state-city": "^3.2.1",
+    "mern-shoeshop": "file:..",
     "overlay-nav-react": "^1.7.1",
     "overlay-navbar": "^1.2.3",
     "react": "^18.2.0",

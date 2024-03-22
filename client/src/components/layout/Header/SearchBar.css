@@ -51,8 +51,8 @@
 
   .searchBarBox>input[type="submit"] {
     height: 10%;
-    padding-left: 15px;
+    padding-left: 8px;
     width: 30%;
-    font: 300 3vw "Roboto";
+    font: 300 3.5vw "Roboto";
   }
 }

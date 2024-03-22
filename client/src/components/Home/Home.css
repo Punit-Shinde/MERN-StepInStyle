@@ -16,22 +16,16 @@
   width: 100vmax;
   height: 100vmax;
   position: relative;
-  /* Ensure content is above the blurred image */
   z-index: 1;
-  /* Ensure content is above the blurred image */
   background-color: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent black background */
   padding: 20px;
-  /* Add padding for better readability */
   border-radius: 10px;
-  /* Optional: Add rounded corners */
 }
 
 .banner-content>h1 {
   margin: 7vmax;
   font: 500 6vmax "Roboto";
   text-shadow: 2px 2px 8px #000000;
-
 }
 
 .banner-content>h1>span {
@@ -191,6 +185,29 @@
 }
 
 @media screen and (max-width: 600px) {
+  .banner {
+    height: 90vmin;
+  }
+  
+  .banner-content {
+    width: 100vmin;
+    height: 100vmin;
+  }
+  
+  .banner-content>h1 {
+    margin-top: 8vmax;
+    font: 500 5vmax "Roboto";
+  }
+  
+  .banner-content>p {
+    margin-bottom: 3vmax;
+    font: 500 3vmax "Roboto";
+  }
+  
+  .banner-content>a>button {
+    font: 600 1.5vmax "Roboto";
+  }
+  
   .productCard>p {
     font-size: 1.7vmax;
   }
@@ -207,5 +224,9 @@
   .productCard>div>span {
     margin: 0 0.5vmax;
     font: 300 1vmax "Roboto";
+  }
+
+  .toProductsBtn {
+    font: 500 2.9vmax "Roboto";
   }
 }

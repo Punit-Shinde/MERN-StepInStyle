@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const app = express();
 const cookieParser = require("cookie-parser");
@@ -15,7 +16,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileupload());
 
-//Route Imports
+// Route Imports
 const product = require("./routes/product.Routes");
 const user = require("./routes/user.Routes");
 const order = require("./routes/order.Routes");
@@ -26,7 +27,14 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
 
-//Middleware for Errors
+// Serve static files from the correct directory
+app.use(express.static(path.join(__dirname, "../client/build"))); 
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html")); 
+});
+
+// Middleware for Errors
 app.use(errorMiddleware);
 
 module.exports = app;

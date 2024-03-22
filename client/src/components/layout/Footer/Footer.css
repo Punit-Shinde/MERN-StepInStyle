@@ -18,6 +18,7 @@ footer {
 .leftFooter>h4 {
   font-family: "Roboto";
   font-size: 1vmax;
+  
 }
 
 .leftFooter>p {
@@ -42,6 +43,7 @@ footer {
 .midFooter>h1 {
   font-size: 4vmax;
   font-family: "Roboto";
+  text-shadow: 2px 2px 8px #000000;
   color: #C06F35;
 }
 
